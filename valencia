@@ -1,0 +1,1 @@
+( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC==TMath::Infinity() || XSecShapeWgt_CCMEC==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC) || XSecShapeWgt_CCMEC>4.5) ?1.:XSecShapeWgt_CCMEC) ) * (RecoMuonP != 7.5) 

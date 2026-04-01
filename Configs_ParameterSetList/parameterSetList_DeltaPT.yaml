@@ -1,0 +1,328 @@
+# NOTES from Jaesung Kim
+# Either "parameterDefinitions or "dialSetDefinitions" must be defined for each ParameterSet
+# - "parameterDefinitions": We are using this for Splines, and give the yaml config
+# - "dialSetDefinitions": Template or covairance matrix
+
+##################################################
+## Template
+##################################################
+
+- name: Template Parameter DeltaPT
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  # numberOfParameters: Can be automatically evaluated from dialSetDefinitions.parametersBinningPath
+  nominalStepSize: 0.1
+  # I choose not to set min/max parameter values here...
+  # From Stephen's useful example, this we can say is true when the binning is based on a true parameter, so each slice should only correspond to one bin...
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: Template Parameter DeltaPT dialSetDefinitions
+      applyOnDataSets: ["*"]
+#      parametersBinningPath: "./binnings/binning_deltapt_true.txt"
+      parametersBinningPath: "./binnings/binning_TrueDeltaPT.txt"
+#      applyCondition: "[Category] == 0 || [Category] == 2"
+      applyCondition: "[IsSignal] == 1"
+      printDialsSummary: true
+
+
+##################################################
+## x-sec
+##################################################
+
+# Parameters are defined by the covariance matrix
+# Although the dials of each parameter are set with external files
+- name: Cross section Systematics
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  # default: false
+  releaseFixedParametersOnHesse: true
+  # "_parameterDefinitionFilePath_" is set by {"parameterDefinitionFilePath"}, {"covarianceMatrixFilePath"}
+  covarianceMatrixFilePath: ./Configs_ParameterSet/GENIEDials/gundaminput_geniesyst.root
+  # "_covarianceMatrixTMatrixD_" is set by "covarianceMatrixTMatrixD"
+  covarianceMatrixTMatrixD: xsec_cov
+  # "_parameterPriorTVectorD_" is set by "parameterPriorTVectorD"
+  parameterPriorTVectorD: xsec_param_prior
+  # "_parameterNameTObjArray_" is set by "parameterNameTObjArray"
+  parameterNameTObjArray: xsec_param_names
+  # "_parameterLowerBoundsTVectorD_" is set by "parameterLowerBoundsTVectorD"
+  parameterLowerBoundsTVectorD: xsec_param_lb
+  # "_parameterUpperBoundsTVectorD_" is set by "parameterUpperBoundsTVectorD"
+  parameterUpperBoundsTVectorD: xsec_param_ub
+
+  parameterDefinitions: "./Configs_ParameterSet/GENIEDials/GENIEDialsDef.yaml"
+
+##################################################
+## detector syst
+##################################################
+
+# Parameters are defined by the covariance matrix
+# Although the dials of each parameter are set with external files
+- name: Detector Systematics
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  releaseFixedParametersOnHesse: true
+  covarianceMatrixFilePath: "./Configs_ParameterSet/DetectorSyst/gundaminput_detsyst.root"
+  covarianceMatrixTMatrixD: detsyst_cov
+  parameterPriorTVectorD: detsyst_param_prior
+  parameterNameTObjArray: detsyst_param_names
+  parameterLowerBoundsTVectorD: detsyst_param_lb
+  parameterUpperBoundsTVectorD: detsyst_param_ub
+
+  parameterDefinitions: "./Configs_ParameterSet/DetectorSyst/DetectorSystDef.yaml"
+
+##################################################
+## FLUX
+##################################################
+
+- name: Flux Systematics HP
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  ## "_enablePca_" is set by "allowPca", "fixGhostFitParameters", "enablePca"
+  ## - default: false
+  #allowPca: true
+
+  #useEigenDecompInFit: false
+
+  #covarianceMatrixFilePath: "./Configs_ParameterSet/Flux/2023-08-17_out_450.37_7991.98_79512.66_QEL11.root" # empty bins removed
+  #covarianceMatrixTMatrixD: "covariance_matrices/hadron/total/cov_total"
+
+  #parameterLimits:
+    #minValue: 0
+    #maxValue: 30
+
+  #useOnlyOneParameterPerEvent: true
+
+  #dialSetDefinitions:
+    #- name: Flux Systematics HP dialSetDefinitions
+      #applyOnDataSets: ["*"]
+      #parametersBinningPath: "./binnings/binning_fluxCovMtx_removeHE_jk.txt" # empty bins removed
+      #printDialsSummary: true
+      #applyCondition: "[IsData]==0"
+
+  releaseFixedParametersOnHesse: true
+  covarianceMatrixFilePath: "./Configs_ParameterSet/Flux/gundaminput_numiHPsyst.root"
+  covarianceMatrixTMatrixD: numiHPsyst_cov
+  parameterPriorTVectorD: numiHPsyst_param_prior
+  parameterNameTObjArray: numiHPsyst_param_names
+  parameterLowerBoundsTVectorD: numiHPsyst_param_lb
+  parameterUpperBoundsTVectorD: numiHPsyst_param_ub
+
+  parameterDefinitions: "./Configs_ParameterSet/Flux/NuMIHPDialsDef.yaml"
+
+
+##################################################
+## NuMI Beamline Flux
+##################################################
+
+# Parameters are defined by the covariance matrix
+# Although the dials of each parameter are set with external files
+- name: Flux Systematics Beamline
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  releaseFixedParametersOnHesse: true # true by default
+  covarianceMatrixFilePath: "./Configs_ParameterSet/Flux/gundaminput_numibeamlinesyst.root"
+  covarianceMatrixTMatrixD: numibeamlinesyst_cov
+  parameterPriorTVectorD: numibeamlinesyst_param_prior
+  parameterNameTObjArray: numibeamlinesyst_param_names
+  parameterLowerBoundsTVectorD: numibeamlinesyst_param_lb
+  parameterUpperBoundsTVectorD: numibeamlinesyst_param_ub
+
+  parameterDefinitions: "./Configs_ParameterSet/Flux/NuMIBeamlineDialsDef.yaml"
+
+##################################################
+## G4 Proton
+##################################################
+
+- name: G4 Proton Fate
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  allowPca: true
+  
+  useEigenDecompInFit: true
+  allowEigenDecompWithBounds: true
+  ## EigenDecomp settings
+  ## "_maxNbEigenParameters_" is set by "maxNbEigenParameters"
+  ## - default: -1
+  ## "_maxEigenFraction_" is set by "maxEigenFraction"
+  ## - default: 1.
+  ## JSON block for eigenParBounds are 
+  ## eigenParBounds:
+  ##   minValue: 0
+  ##   maxValue: 30
+
+  covarianceMatrixFilePath: "./Configs_ParameterSet/G4/output_CovMat_G4ProtonFate.root"
+  covarianceMatrixTMatrixD: "G4ProtonFate/G4ProtonFate_covariance"
+
+  parameterLimits:
+    minValue: 0
+    maxValue: 30
+
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: G4 Proton Fate dialSetDefinitions
+      applyOnDataSets: ["*"]
+      parametersBinningPath: "./binnings/binning_G4ProtonFate.txt"
+      printDialsSummary: true
+      applyCondition: "[IsData]==0"
+
+##################################################
+## G4 Piplus
+##################################################
+
+- name: G4 Piplus Fate
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  allowPca: true
+
+  useEigenDecompInFit: true
+  allowEigenDecompWithBounds: true
+
+  covarianceMatrixFilePath: "./Configs_ParameterSet/G4/output_CovMat_G4PiPlusFate.root"
+  covarianceMatrixTMatrixD: "G4PiPlusFate/G4PiPlusFate_covariance"
+
+  parameterLimits:
+    minValue: 0
+    maxValue: 30
+
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: G4 Piplus Fate dialSetDefinitions
+      applyOnDataSets: ["*"]
+      parametersBinningPath: "./binnings/binning_G4PiPlusFate.txt"
+      printDialsSummary: true
+      applyCondition: "[IsData]==0"
+
+
+##################################################
+## G4 Piminus
+##################################################
+
+- name: G4 Piminus Fate
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  allowPca: true
+
+  useEigenDecompInFit: true
+  allowEigenDecompWithBounds: true
+
+  covarianceMatrixFilePath: "./Configs_ParameterSet/G4/output_CovMat_G4PiMinusFate.root"
+  covarianceMatrixTMatrixD: "G4PiMinusFate/G4PiMinusFate_covariance"
+
+  parameterLimits:
+    minValue: 0
+    maxValue: 30
+
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: G4 Piminus Fate dialSetDefinitions
+      applyOnDataSets: ["*"]
+      parametersBinningPath: "binnings/binning_G4PiMinusFate.txt"
+      printDialsSummary: true
+      applyCondition: "[IsData]==0"
+
+##################################################
+## fsi_pi
+##################################################
+
+- name: FSI pi
+  isEnabled: false
+
+  printDialSetsSummary: true
+
+  allowPca: true
+
+  useEigenDecompInFit: true
+
+  covarianceMatrixFilePath: "./Configs_ParameterSet/FSI/output_CovMat_GENIE_fsi_pi_deltapt.root"
+  covarianceMatrixTMatrixD: "GENIE_fsi_pi_deltapt/GENIE_fsi_pi_deltapt_covariance"
+
+  parameterLimits:
+    minValue: 0
+    maxValue: 30
+
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: FSI pi dialSetDefinitions
+      applyOnDataSets: ["*"]
+      parametersBinningPath: "./binnings/binning_deltapt_true.txt"
+      printDialsSummary: true
+      applyCondition: "[IsData]==0"
+
+
+##################################################
+## fsi_N
+##################################################
+
+- name: FSI N
+  isEnabled: false
+
+  printDialSetsSummary: true
+
+  allowPca: true
+
+  useEigenDecompInFit: true
+
+  covarianceMatrixFilePath: "./Configs_ParameterSet/FSI/output_CovMat_GENIE_fsi_N_deltapt.root"
+  covarianceMatrixTMatrixD: "GENIE_fsi_N_deltapt/GENIE_fsi_N_deltapt_covariance"
+
+  parameterLimits:
+    minValue: 0
+    maxValue: 30
+
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: FSI N dialSetDefinitions
+      applyOnDataSets: ["*"]
+      parametersBinningPath: "./binnings/binning_deltapt_true.txt"
+      printDialsSummary: true
+      applyCondition: "[IsData]==0"
+
+##################################################
+## Q2-W Template
+##################################################
+
+- name: BackgroundFit
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  nominalStepSize: 0.1
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: BackgroundFit dialSetDefinitions
+      applyOnDataSets: ["*"]
+
+      # Using (W,Q2)
+      parametersBinningPath: "./binnings/binning_Q2_W_Template.txt"
+      applyCondition: "[TrueNPiPlus] > 0 || [TrueNPiMinus] > 0"
+
+      printDialsSummary: true
+
+  # Prior from NuWro vs GENIE
+  # - Prior = (40, 60) for (LoW,HiW)
+  covarianceMatrixFilePath: "./Configs_ParameterSet/BackgroundFit/RegCov_Bins0Plus8_StrengthTenToThe0.00_PriorLoW0.4_PriorHiW0.6_NSet2.root"
+  covarianceMatrixTMatrixD: "RegCov_Bins0Plus8_StrengthTenToThe0.00_PriorLoW0.4_PriorHiW0.6_NSet2"
+

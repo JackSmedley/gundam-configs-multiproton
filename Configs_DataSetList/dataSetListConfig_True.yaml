@@ -1,0 +1,54 @@
+- name: "ICARUSNuMI_1mu2p0pi_true"
+
+  mc:
+    ## "DataDispenser::DataDispenserParameters _parameters_" is configured by below
+    
+    ## _parameters_.treePath
+    tree: "tclones/truthTree"
+    ## _parameters_.filePathList
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub//Sep30_FluxUpdate/MakeTree_NuMI_MC_Nu_Phase2_v09_72_00_03p01_deduped_Merged_flatcaf_ReNuSyst250403_WithTrackSplit_BNBFixedProb.root"
+    ## _parameters_.nominalWeightFormulaStr
+    nominalWeightFormula: "(CVWgt)"
+
+- name: "ICARUSNuMI_1mu2p0pi_true_01"
+
+  mc:
+    ## "DataDispenser::DataDispenserParameters _parameters_" is configured by below
+
+    ## _parameters_.treePath
+    tree: "tclones/truthTree"
+    ## _parameters_.filePathList
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub//Sep30_FluxUpdate/MakeTree_NuMI_MC_Nu_Phase2_v09_72_00_03p01_deduped_Merged_flatcaf_ReNuSyst250403_WithTrackSplit_BNBFixedProb.root"
+    ## _parameters_.nominalWeightFormulaStr
+    nominalWeightFormula: "(CVWgt * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR))"
+
+- name: "ICARUSNuMI_1mu2p0pi_true_10"
+
+  mc:
+    ## "DataDispenser::DataDispenserParameters _parameters_" is configured by below
+
+    ## _parameters_.treePath
+    tree: "tclones/truthTree"
+    ## _parameters_.filePathList
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub//Sep30_FluxUpdate/MakeTree_NuMI_MC_Nu_Phase2_v09_72_00_03p01_deduped_Merged_flatcaf_ReNuSyst250403_WithTrackSplit_BNBFixedProb.root"
+    ## _parameters_.nominalWeightFormulaStr
+    nominalWeightFormula: "(CVWgt * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR))"
+
+- name: "ICARUSNuMI_1mu2p0pi_true_11"
+
+  mc:
+    ## "DataDispenser::DataDispenserParameters _parameters_" is configured by below
+
+    ## _parameters_.treePath
+    tree: "tclones/truthTree"
+    ## _parameters_.filePathList
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub//Sep30_FluxUpdate/MakeTree_NuMI_MC_Nu_Phase2_v09_72_00_03p01_deduped_Merged_flatcaf_ReNuSyst250403_WithTrackSplit_BNBFixedProb.root"
+    ## _parameters_.nominalWeightFormulaStr
+    nominalWeightFormula: "(CVWgt * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR))"
+
+
+

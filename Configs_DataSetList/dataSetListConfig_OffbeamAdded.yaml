@@ -1,0 +1,137 @@
+- name: "ICARUSNuMI_1muNp0pi_RealData"
+
+  isEnabled: true
+
+  # "_selectedDataEntry_" is set by "selectedDataEntry"
+  # - default: "Asimov"
+  selectedDataEntry: "data"
+
+  # "_selectedToyEntry_" is set by "selectedToyEntry"
+  # - default: "Asimov"
+
+  # "_showSelectedEventCount_" is set by "showSelectedEventCount"
+  # - default: true
+  showSelectedEventCount: true
+
+  # Parameters under development
+  # "_devSingleThreadEventLoaderAndIndexer_" is set by "devSingleThreadEventLoaderAndIndexer"
+  # "_devSingleThreadEventSelection_" is set by "devSingleThreadEventSelection"
+  # "_sortLoadedEvents_" is set by "sortLoadedEvents"
+
+  # Now we configure "DataDispenser" objects
+
+  mc:
+    ## "DataDispenser::DataDispenserParameters _parameters_" is configured by below
+    
+    ## _parameters_.treePath
+    tree: "AllSamples_FillTree/selectedEvents_NSigmas"
+    ## _parameters_.filePathList
+    filePathList:
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run1.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run2.root"
+    ## _parameters_.nominalWeightFormulaStr
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.174105 : 0.145303) : 0.044935293187211914 * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) )"
+
+    ## _parameters_.additionalVarsStorage is set by {"additionalLeavesStorage"}, {"additionalVarsStorage"}
+    ## _parameters_.dummyVariablesList is set by "dummyVariablesList"
+    ## _parameters_.useMcContainer is set by "useMcContainer"
+    ## _parameters_.dialIndexFormula is set by "dialIndexFormula"
+    ## _parameters_.selectionCutFormulaStr is set by "selectionCutFormula"
+
+  data:
+    ## DataDispenser for "Data" is a map; std::string-to-DataDispenser
+    ## So the YAML config should be a "list"
+    ## - By default, it copies the MC DataDispenser with a key of "Asimov"
+    ## - Having name: "fromMc" will copy the MC Datadispenser
+    ## Then below are added to the map
+
+    - name: "data"
+      tree: "AllSamples_FillTree/selectedEvents"
+      nominalWeightFormula: "(1.)"
+      filePathList:
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Random15Percent_Run1.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Random15Percent_Run2.root"
+
+
+# For signal selection, we use fake data from 30% of MC (POT = 2.4197050e+20) without offbeam; normalized to ~15% Data, 3.6283532e+19
+# For sideband, we use real data; for now, 15% of Run1+Run2 = 3.6283532e+19 
+
+- name: "ICARUSNuMI_1muNp0pi_Random15PercentRealDataForSideband_FakeDataForSignal"
+
+  isEnabled: true
+  showSelectedEventCount: true
+
+  selectedDataEntry: "Random15PercentRealDataForSideband_FakeDataForSignal"
+
+  mc:
+    tree: "AllSamples_FillTree/selectedEvents_NSigmas"
+    filePathList:
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run1.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run2.root"
+    nominalWeightFormula: "CutType==1 ? ( IsData ? (0.) : (3.6283532e+19/8.0746178e+20) * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) ) : ( IsData ? (Run<9300 ? 0.174105 : 0.145303) : (3.6283532e+19/8.0746178e+20) * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) )"
+
+  data:
+    - name: "Random15PercentRealDataForSideband_FakeDataForSignal"
+      tree: "AllSamples_FillTree/selectedEvents"
+      nominalWeightFormula: "CutType==1 ? ( IsData ? (0.) : (3.6283532e+19/2.4197050e+20)  * (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) : ( IsData ? (1.) : (0.) )"
+      filePathList:
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Random15Percent_Run1.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Random15Percent_Run2.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt_30Files.root"
+
+# For signal selection, we use fake data from 30% of MC (POT = 2.4197050e+20) without offbeam; normalized to ~15% Data, 3.6283532e+19
+# For sideband, we use real data; for now, 15% of Run1+Run2 = 3.6283532e+19 
+
+- name: "ICARUSNuMI_1muNp0pi_Random15PercentRealDataForSideband_FakeDataForSignal_ApplyLowQ2Suppression"
+
+  isEnabled: true
+  showSelectedEventCount: true
+
+  selectedDataEntry: "Random15PercentRealDataForSideband_FakeDataForSignal"
+
+  mc:
+    tree: "AllSamples_FillTree/selectedEvents_NSigmas"
+    filePathList:
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run1.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run2.root"
+    nominalWeightFormula: "CutType==1 ? ( IsData ? (0.) : (3.6283532e+19/8.0746178e+20) * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW * SPPLowQ2Suppression) ) ) : ( IsData ? (Run<9300 ? 0.174105 : 0.145303) : (3.6283532e+19/8.0746178e+20) * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW * SPPLowQ2Suppression) ) )"
+
+  data:
+    - name: "Random15PercentRealDataForSideband_FakeDataForSignal"
+      tree: "AllSamples_FillTree/selectedEvents"
+      nominalWeightFormula: "CutType==1 ? ( IsData ? (0.) : (3.6283532e+19/2.4197050e+20)  * (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW * SPPLowQ2Suppression) ) : ( IsData ? (1.) : (0.) )"
+      filePathList:
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Random15Percent_Run1.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Random15Percent_Run2.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt_30Files.root"
+
+
+# For signal selection, we use fake data from 30% of MC (POT = 2.4197050e+20) without offbeam; normalized to 2.4223174e+20
+# For sideband, we use real data; for now, 15% of Run1+Run2 = 2.4223174e+20
+
+- name: "ICARUSNuMI_1muNp0pi_RealDataForSideband_FakeDataForSignal"
+
+  isEnabled: true
+  showSelectedEventCount: true
+
+  selectedDataEntry: "RealDataForSideband_FakeDataForSignal"
+
+  mc:
+    tree: "AllSamples_FillTree/selectedEvents_NSigmas"
+    filePathList:
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run1.root"
+      - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_Data_OffBeamNUMIMAJORITY_DMCP2023F_F_Run2.root"
+    nominalWeightFormula: "CutType==1 ? ( IsData ? (0.) : (2.4223174e+20/8.0746178e+20) * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) ) : ( IsData ? (Run<9300 ? 1.163560 : 0.975798) : (2.4223174e+20/8.0746178e+20) * ( (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) )"
+
+  data:
+    - name: "RealDataForSideband_FakeDataForSignal"
+      tree: "AllSamples_FillTree/selectedEvents"
+      nominalWeightFormula: "CutType==1 ? ( IsData ? (0.) : (2.4223174e+20/2.4197050e+20)  * (IsSignal==5 ? 0.67937750173924 : FluxWeightWithG3Chase * SPPQ2RW * SPPTpiMINERvAFittedReweight * TrackSplitRW) ) : ( IsData ? (1.) : (0.) )"
+      filePathList:
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Run1.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/NuMINumuXSec/NuMIPyAna/EventSelectionPlots/inputfiles/240429_PostNuInt/rootfiles/MakeTree_Data_NUMIMAJORITY_DMCP2023F_F_Run2.root"
+        - "/Users/jskim/Documents/Neutrino/ICARUS/GUNDAM/work/rootfiles/240429_PostNuInt/MakeTree_NuMI_MC_Nu_Phase2_ReprocD_SkipCorrupt_30Files.root"

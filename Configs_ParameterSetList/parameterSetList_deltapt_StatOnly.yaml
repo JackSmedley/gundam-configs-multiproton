@@ -1,0 +1,28 @@
+# NOTES from Jaesung Kim
+# Either "parameterDefinitions or "dialSetDefinitions" must be defined for each ParameterSet
+# - "parameterDefinitions": We are using this for Splines, and give the yaml config
+# - "dialSetDefinitions": Template or covairance matrix
+
+##################################################
+## Template
+##################################################
+
+- name: Template Parameter 1mu1pX
+  isEnabled: true
+
+  printDialSetsSummary: true
+
+  # numberOfParameters: Can be automatically evaluated from dialSetDefinitions.parametersBinningPath
+  nominalStepSize: 0.1
+  # I choose not to set min/max parameter values here...
+  # From Stephen's useful example, this we can say is true when the binning is based on a true parameter, so each slice should only correspond to one bin...
+  useOnlyOneParameterPerEvent: true
+
+  dialSetDefinitions:
+    - name: Template Parameter 1mu1pX dialSetDefinitions
+      applyOnDataSets: ["*"]
+      parametersBinningPath: "./binnings/binning_deltapt_true.txt"
+      applyCondition: "[IsSignal] == 1"
+      printDialsSummary: true
+
+

@@ -1,0 +1,232 @@
+- name: "ICARUSNuMI_1mu2p0pi_0"
+
+  isEnabled: true
+
+  #selectedDataEntry: "fakeSignal"
+
+  #selectedDataEntry: "1to1Asimov"
+  #selectedDataEntry: "signalUpBy2"
+  #selectedDataEntry: "signalLinearInrease"
+  #selectedDataEntry: "1pNpiUpBy50Perc"
+  #selectedDataEntry: "1pNpiUpBy5"
+  #selectedDataEntry: "EmpiricalMEC"
+  #selectedDataEntry: "MartiniMEC"
+  #selectedDataEntry: "allDown30Percent"
+  #selectedDataEntry: "increaseHammer"
+  selectedDataEntry: "decreaseHammer"
+
+  showSelectedEventCount: true
+
+  mc:
+    
+    tree: "tclones/recoTree"
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21) )"
+
+  data:
+
+    - name: "fakeSignal"
+      tree: "tclones/recoTree"
+      ##                     Is signal selection then 0 for data events and nominal for MC,                                         else 1 for data events and 0 MC
+      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+
+
+    - name: "1to1Asimov"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "signalUpBy2"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * ((Category == 0 || Category == 2) ? 2. : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+
+    - name: "signalLinearInrease"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * ((Category == 0 || Category == 2) ? 1.*(HadronicOpeningAngle + 1.) : 1.) ))"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+
+    - name: "1pNpiUpBy5"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (Category == 5 ? 5. : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "1pNpiUpBy50Perc"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (Category == 5 ? 1.5 : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "EmpiricalMEC"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC_Empirical==TMath::Infinity() || XSecShapeWgt_CCMEC_Empirical==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC_Empirical))?1.:XSecShapeWgt_CCMEC_Empirical) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "MartiniMEC"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC_Martini==TMath::Infinity() || XSecShapeWgt_CCMEC_Martini==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC_Martini)?1.:XSecShapeWgt_CCMEC_Martini)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "allDown30Percent"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * .7) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "increaseHammer"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (HadronicOpeningAngle < -.75 ? (-16.*HadronicOpeningAngle - 12.) : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+
+    ### Linear weight function from 0.4 at costh = -1. to 1. at costh = -.5, no reweight above 
+    - name: "decreaseHammer"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * ((HadronicOpeningAngle < -.5 && HadronicOpeningAngle > -2.) ? (1.2*HadronicOpeningAngle + 1.6) : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+- name: "ICARUSNuMI_1mu2p0pi_1"
+
+  isEnabled: true
+
+  #selectedDataEntry: "fakeSignal"
+
+  #selectedDataEntry: "1to1Asimov"
+  #selectedDataEntry: "signalUpBy2"
+  #selectedDataEntry: "signalLinearInrease"
+  #selectedDataEntry: "1pNpiUpBy50Perc"
+  #selectedDataEntry: "1pNpiUpBy5"
+  #selectedDataEntry: "EmpiricalMEC"
+  #selectedDataEntry: "MartiniMEC"
+  #selectedDataEntry: "allDown30Percent"
+  #selectedDataEntry: "increaseHammer"
+  selectedDataEntry: "decreaseHammer"
+
+  showSelectedEventCount: true
+
+  mc:
+    
+    tree: "tclones/recoTree"
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21) )"
+
+  data:
+
+    - name: "fakeSignal"
+      tree: "tclones/recoTree"
+      ##                     Is signal selection then 0 for data events and nominal for MC,                                         else 1 for data events and 0 MC
+      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+
+
+    - name: "1to1Asimov"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "signalUpBy2"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * ((Category == 0 || Category == 2) ? 2. : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+
+    - name: "signalLinearInrease"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * ((Category == 0 || Category == 2) ? 1.*(HadronicOpeningAngle + 1.) : 1.) ))"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+
+    - name: "1pNpiUpBy5"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (Category == 5 ? 5. : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "1pNpiUpBy50Perc"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (Category == 5 ? 1.5 : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "EmpiricalMEC"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC_Empirical==TMath::Infinity() || XSecShapeWgt_CCMEC_Empirical==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC_Empirical))?1.:XSecShapeWgt_CCMEC_Empirical) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "MartiniMEC"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC_Martini==TMath::Infinity() || XSecShapeWgt_CCMEC_Martini==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC_Martini)?1.:XSecShapeWgt_CCMEC_Martini)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "allDown30Percent"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * .7) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+
+    - name: "increaseHammer"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * (HadronicOpeningAngle < -.75 ? (-16.*HadronicOpeningAngle - 12.) : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+
+    ### Linear weight function from 0.4 at costh = -1. to 1. at costh = -.5, no reweight above 
+    - name: "decreaseHammer"
+      tree: "tclones/recoTree"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt) * 2.500616E+20/1.0900766e+21 * ((HadronicOpeningAngle < -.5 && HadronicOpeningAngle > -2.) ? (1.2*HadronicOpeningAngle + 1.6) : 1.)) )"
+      filePathList:
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Apr15_FluxFix/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst11Oct24.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
+        - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar21_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
+

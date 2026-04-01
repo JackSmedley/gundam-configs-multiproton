@@ -1,0 +1,39 @@
+varDictionnaries:
+  - name: "ClassLabel"
+    dictionary:
+      - { value: 7, title: "Cosmic", color: 617 }
+      - { value: 6, title: "NC", color: 1 }
+      - { value: 5, title: "OOFV", color: 800 }
+      - { value: 4, title: "CC Other", color: 866 }
+      - { value: 3, title: "CC<2p", color: 842 }
+      - { value: 2, title: "CC>1pN#pi", color: 400 }
+      - { value: 1, title: "CC2p0#pi", color: 855 }
+      - { value: 0, title: "CC>2p0#pi", color: 805 }
+
+histogramsDefinition:
+  - varToPlot: "Raw"
+    splitVars: ["", "ClassLabel"]
+  - varToPlot: "HadronicOpeningAngle"
+    splitVars: ["", "ClassLabel"]
+    useSampleBinning: true
+    rescaleAsBinWidth: false
+    xTitle: "Cosine of Proton Pair Opening Angle"
+    yTitle: "Events"
+  - varToPlot: "ProtonPionAngle"
+    splitVars: ["", "ClassLabel"]
+    useSampleBinning: true
+    rescaleAsBinWidth: false
+    xTitle: "Cosine of Proton-Pion Opening Angle"
+    yTitle: "Events"
+  - varToPlot: "DeltaPTT"
+    splitVars: ["", "ClassLabel"]
+    useSampleBinning: true
+    rescaleAsBinWidth: false
+    xTitle: "#deltap_{TT} (GeV/c)"
+    yTitle: "Events"
+
+canvasParameters:
+  height: 800
+  width: 1000
+  nbXplots: 1
+  nbYplots: 1

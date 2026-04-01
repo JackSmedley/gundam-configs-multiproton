@@ -1,0 +1,52 @@
+- name: "ICARUSNuMI_1mu2p0pi"
+
+  isEnabled: true
+
+  # "_selectedDataEntry_" is set by "selectedDataEntry"
+  # - default: "Asimov"
+  selectedDataEntry: "tenPercent"
+
+  # "_selectedToyEntry_" is set by "selectedToyEntry"
+  # - default: "Asimov"
+
+  # "_showSelectedEventCount_" is set by "showSelectedEventCount"
+  # - default: true
+  showSelectedEventCount: true
+
+  # Parameters under development
+  # "_devSingleThreadEventLoaderAndIndexer_" is set by "devSingleThreadEventLoaderAndIndexer"
+  # "_devSingleThreadEventSelection_" is set by "devSingleThreadEventSelection"
+  # "_sortLoadedEvents_" is set by "sortLoadedEvents"
+
+  # Now we configure "DataDispenser" objects
+
+  mc:
+    ## "DataDispenser::DataDispenserParameters _parameters_" is configured by below
+    
+    ## _parameters_.treePath
+    tree: "tclones/recoTree"
+    ## _parameters_.filePathList
+    filePathList:
+      - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Dec10_detSystUpdate/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst09Oct24.root"
+    ## _parameters_.nominalWeightFormulaStr
+    nominalWeightFormula: "(Category == 11 ? 0.71202822 : CVWgt) * 2.422317e+19/8.0746178e+20"
+
+    ## _parameters_.additionalVarsStorage is set by {"additionalLeavesStorage"}, {"additionalVarsStorage"}
+    ## _parameters_.dummyVariablesList is set by "dummyVariablesList"
+    ## _parameters_.useMcContainer is set by "useMcContainer"
+    ## _parameters_.dialIndexFormula is set by "dialIndexFormula"
+    ## _parameters_.selectionCutFormulaStr is set by "selectionCutFormula"
+
+  data:
+    ## DataDispenser for "Data" is a map; std::string-to-DataDispenser
+    ## So the YAML config should be a "list"
+    ## - By default, it copies the MC DataDispenser with a key of "Asimov"
+    ## - Having name: "fromMc" will copy the MC Datadispenser
+    ## Then below are added to the map
+
+    - name: "tenPercent"
+      tree: "tenPercentTree"
+      nominalWeightFormula: "()"
+      filePathList:
+        - "/nashome/j/jsmedley/tenpercent_seed378.root"
+

@@ -1,0 +1,785 @@
+- parameterName: "flux_PCA_0"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_0"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_1"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_1"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_2"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_2"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_3"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_3"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_4"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_4"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_5"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_5"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_6"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_6"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_7"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_7"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_8"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_8"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_9"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_9"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_10"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_10"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_11"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_11"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_12"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_12"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_13"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_13"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_14"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_14"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_15"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_15"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_16"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_16"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_17"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_17"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_18"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_18"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_19"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_19"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_20"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_20"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_21"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_21"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_22"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_22"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_23"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_23"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_24"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_24"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_25"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_25"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_26"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_26"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_27"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_27"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_28"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_28"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_29"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_29"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_30"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_30"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_31"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_31"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_32"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_32"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_33"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_33"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_34"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_34"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_35"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_35"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_36"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_36"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_37"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_37"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_38"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_38"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_39"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_39"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_40"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_40"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_41"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_41"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_42"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_42"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_43"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_43"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_44"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_44"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_45"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_45"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_46"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_46"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_47"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_47"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_48"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_48"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_49"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_49"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_50"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_50"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_51"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_51"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_52"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_52"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_53"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_53"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_54"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_54"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_55"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_55"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_56"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_56"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_57"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_57"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_58"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_58"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_59"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_59"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_60"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_60"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_61"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_61"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_62"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_62"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_63"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_63"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_64"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_64"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_65"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_65"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_66"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_66"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_67"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_67"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_68"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_68"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_69"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_69"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_70"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_70"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_71"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_71"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_72"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_72"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_73"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_73"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_74"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_74"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_75"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_75"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_76"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_76"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_77"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_77"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_78"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_78"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_79"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_79"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_80"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_80"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_81"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_81"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_82"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_82"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_83"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_83"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_84"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_84"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_85"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_85"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_86"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_86"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_87"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_87"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_88"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_88"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_89"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_89"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_90"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_90"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_91"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_91"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_92"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_92"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_93"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_93"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_94"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_94"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_95"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_95"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_96"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_96"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "flux_PCA_97"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "flux_PCA_97"
+      applyCondition: "[IsData]==0"
+
+

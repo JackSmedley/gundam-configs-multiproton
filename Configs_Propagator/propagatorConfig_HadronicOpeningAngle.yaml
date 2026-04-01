@@ -1,0 +1,55 @@
+# Propagator settings
+
+## ParameterManager
+parametersManagerConfig:
+  parameterSetList: "./Configs_ParameterSetList/parameterSetList_HadronicOpeningAngle.yaml"
+
+  ## "_reThrowParSetIfOutOfBounds_" is set by "reThrowParSetIfOutOfBounds"
+  ## default: true
+
+  ## "_throwToyParametersWithGlobalCov_" is set by "throwToyParametersWithGlobalCov"
+  ## default: false
+
+## "_showEventBreakdown_" is set by "showEventBreakdown"
+## - default: true
+showEventBreakdown: true
+
+## "_throwAsimovToyParameters_" is set by "throwAsimovFitParameters"
+## - default: false
+
+## "_enableStatThrowInToys_" is set by "enableStatThrowInToys"
+## - default: true
+enableStatThrowInToys: false
+
+## "_gaussStatThrowInToys_" is set by "gaussStatThrowInToys"
+## - default: false
+
+## "_enableEventMcThrow_" is set by "enableEventMcThrow"
+## - default: true
+enableEventMcThrow: false
+
+## "_parameterInjectorMc_" is set by "parameterInjection"
+## - default: empty JSON
+
+## debug/dev parameters
+## "_debugPrintLoadedEvents_" is set by "debugPrintLoadedEvents"
+## - default: false
+debugPrintLoadedEvents: true
+
+## "_debugPrintLoadedEventsNbPerSample_" is set by "debugPrintLoadedEventsNbPerSample"
+## - default: 5
+
+## "_devSingleThreadReweight_" is set by "devSingleThreadReweight"
+## - default: false
+
+## "_devSingleThreadHistFill_" is set by "devSingleThreadHistFill"
+## - default: false
+
+## if key "globalEventReweightCap" given, EventDialCache will be set
+
+## "fitSampleSetConfig" is set by {"sampleSetConfig"}, {"fitSampleSetConfig"}
+fitSampleSetConfig: "./Configs_FitSampleSet/fitSamples_HadronicOpeningAngle.yaml"
+
+## "plotGeneratorConfig" is set by "plotGeneratorConfig"
+#plotGeneratorConfig: "./Configs_PlotGenerator/plotConfigs_HadronicOpeningAngle.yaml"
+

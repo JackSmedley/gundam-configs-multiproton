@@ -1,0 +1,80 @@
+- parameterName: "HornCurr"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "HornCurr"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Horn1_x"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Horn1_x"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Horn1_y"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Horn1_y"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Beam_spot"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Beam_spot"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Horn2_x"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Horn2_x"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Horn2_y"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Horn2_y"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Horns_water"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Horns_water"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Beam_shift_x"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Beam_shift_x"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Beam_shift_y"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Beam_shift_y"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "Target_z"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "Target_z"
+      applyCondition: "[IsData]==0"
+

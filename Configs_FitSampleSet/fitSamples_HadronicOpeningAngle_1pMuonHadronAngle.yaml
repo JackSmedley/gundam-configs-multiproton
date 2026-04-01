@@ -1,0 +1,16 @@
+fitSampleList:
+  - name: "ICARUSNuMI_1mu2p0pi_signal"
+    isEnabled: true
+    binning: "./binnings/binning_HadronicOpeningAngle.txt"
+    selectionCuts: "CutType == 0"
+    dataSets: ["ICARUSNuMI_1mu2p0pi"]
+  - name: "ICARUSNuMI_1mu2p0pi_1pNpisideband"
+    isEnabled: true
+    binning: "./binnings/binning_MuonHadronAngle.txt"
+    selectionCuts: "CutType == 1"
+    dataSets: ["ICARUSNuMI_1mu2p0pi"]
+  - name: "ICARUSNuMI_1mu2p0pi_2pNpisideband"
+    isEnabled: true
+    binning: "./binnings/binning_HadronicOpeningAngle.txt"
+    selectionCuts: "CutType == 2"
+    dataSets: ["ICARUSNuMI_1mu2p0pi"]

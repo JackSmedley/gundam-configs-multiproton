@@ -1,0 +1,48 @@
+- parameterName: "NuMIXSecFrontIndPlaneGainSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecFrontIndPlaneGainSyst"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "NuMIXSecFrontIndPlaneNoiseSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecFrontIndPlaneNoiseSyst"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "NuMIXSecFrontIndPlaneSignalShapeFittedSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecFrontIndPlaneSignalShapeFittedSyst"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "NuMIXSecMiddleIndPlaneTransparencySyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecMiddleIndPlaneTransparencySyst"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "NuMIXSecCaloGainSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecCaloGainSyst"
+      applyCondition: "[IsData]==0"
+
+- parameterName: "NuMIXSecElectronLifetimeSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecElectronLifetimeSyst"
+      applyCondition: "[IsData]==0"
+

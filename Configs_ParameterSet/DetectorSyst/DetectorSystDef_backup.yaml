@@ -1,0 +1,31 @@
+- parameterName: "NuMIXSecFrontIndPlaneGainSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecFrontIndPlaneGainSyst"
+
+- parameterName: "NuMIXSecFrontIndPlaneNoiseSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecFrontIndPlaneNoiseSyst"
+
+- parameterName: "NuMIXSecFrontIndPlaneSignalShapeSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecFrontIndPlaneSignalShapeSyst"
+
+- parameterName: "NuMIXSecMiddleIndPlaneTransparencySyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecMiddleIndPlaneTransparencySyst"

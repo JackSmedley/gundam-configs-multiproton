@@ -1,0 +1,38 @@
+varDictionnaries:
+#  - name: "ClassLabel"
+#    dictionary:
+#      - { value: 7, title: "Cosmic", color: 1440 }
+#      - { value: 6, title: "NC", color: 1 }
+#      - { value: 5, title: "OOFV", color: 1434 }
+#      - { value: 4, title: "CC Other", color: 1435 }
+#      - { value: 3, title: "CC<2p", color: 1436 }
+#      - { value: 2, title: "CC>1pN#pi", color: 1437 }
+#      - { value: 1, title: "CC2p0#pi", color: 1438 }
+#      - { value: 0, title: "CC>2p0#pi", color: 1430 }
+  - name: "ClassLabel"
+    dictionary:
+      - { value: 7, title: "Cosmic", color: 617 }
+      - { value: 6, title: "NC", color: 1 }
+      - { value: 5, title: "OOFV", color: 800 }
+      - { value: 4, title: "CC Other", color: 866 }
+      - { value: 3, title: "CC<2p", color: 842 }
+      - { value: 2, title: "CC>1pN#pi", color: 400 }
+      - { value: 1, title: "CC2p0#pi", color: 855 }
+      - { value: 0, title: "CC>2p0#pi", color: 805 }
+
+histogramsDefinition:
+  - varToPlot: "Raw"
+    splitVars: ["", "ClassLabel"]
+  - varToPlot: "DeltaAlphaT"
+    splitVars: ["", "ClassLabel"]
+    useSampleBinning: true
+    rescaleAsBinWidth: false
+    xTitle: "#delta#alpha_{T}"
+    yTitle: "Events"
+    #xMax: 0.81
+
+canvasParameters:
+  height: 800
+  width: 1000
+  nbXplots: 1
+  nbYplots: 1

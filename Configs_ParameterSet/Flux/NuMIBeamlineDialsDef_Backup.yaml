@@ -1,0 +1,71 @@
+- parameterName: "numi_beam_div"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_beam_div"
+
+- parameterName: "numi_beam_power"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_beam_power"
+
+- parameterName: "numi_beam_shift_y"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_beam_shift_y"
+
+- parameterName: "numi_beam_shift_x"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_beam_shift_x"
+
+- parameterName: "numi_beam_spot"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_beam_spot"
+
+- parameterName: "numi_horn1_x"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_horn1_x"
+
+- parameterName: "numi_horn1_y"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_horn1_y"
+
+- parameterName: "numi_horn_current_plus"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_horn_current_plus"
+
+- parameterName: "numi_water_layer"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialsType: Graph
+      dialSubType: ROOT
+      minimumSplineResponse: 0
+      dialLeafName: "numi_water_layer"
