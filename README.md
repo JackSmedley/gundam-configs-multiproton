@@ -18,7 +18,7 @@ Configs are available for six observables:
 All observables are defined with respect to the muon and leading two protons or for the 1pNpi sideband with respect to the muon, the proton, and the pion  
 Corresponding truth variables in the tree are all named "TrueX" for reco variable X  
   
-### A Note on On-Off systematics and config files labelled "\_XY" for X=0,1 and Y=0,1  
+## A Note on On-Off systematics and config files labelled "\_XY" for X=0,1 and Y=0,1  
 Two highly relevant on-off model switch systematics are always set to discrete values of 0 or 1 during the fit: "DecayAngMEC" and "ThetaDelta2Npi"  
 For "\_XY" configs, X gives the value of "DecayAngMEC", and Y is the value of "ThetaDelta2Npi"  
 Config files without these lables all have X=0 and Y=0  
