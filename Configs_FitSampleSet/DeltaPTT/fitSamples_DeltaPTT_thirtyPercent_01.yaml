@@ -1,0 +1,16 @@
+fitSampleList:
+  - name: "signal_DeltaPTT"
+    isEnabled: true
+    binning: "./binnings/binning_DeltaPTT.txt"
+    selectionCuts: "CutType == 0"
+    dataSets: ["ICARUSNuMI_1mu2p0pi_thirtyPercent_01"]
+  - name: "1pNpisideband_DeltaPTT"
+    isEnabled: true
+    binning: "./binnings/binning_DeltaPTT.txt"
+    selectionCuts: "CutType == 1"
+    dataSets: ["ICARUSNuMI_1mu2p0pi_thirtyPercent_01"]
+  - name: "2pNpisideband_DeltaPTT"
+    isEnabled: true
+    binning: "./binnings/binning_DeltaPTT.txt"
+    selectionCuts: "CutType == 2"
+    dataSets: ["ICARUSNuMI_1mu2p0pi_thirtyPercent_01"]

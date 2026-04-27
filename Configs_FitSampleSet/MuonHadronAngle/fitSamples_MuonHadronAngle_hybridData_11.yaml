@@ -1,0 +1,16 @@
+fitSampleList:
+  - name: "signal_MuonHadronAngle"
+    isEnabled: true
+    binning: "./binnings/binning_MuonHadronAngle.txt"
+    selectionCuts: "CutType == 0"
+    dataSets: ["ICARUSNuMI_1mu2p0pi_hybridData_11"]
+  - name: "1pNpisideband_MuonHadronAngle"
+    isEnabled: true
+    binning: "./binnings/binning_MuonHadronAngle.txt"
+    selectionCuts: "CutType == 1"
+    dataSets: ["ICARUSNuMI_1mu2p0pi_hybridData_11"]
+  - name: "2pNpisideband_MuonHadronAngle"
+    isEnabled: true
+    binning: "./binnings/binning_MuonHadronAngle.txt"
+    selectionCuts: "CutType == 2"
+    dataSets: ["ICARUSNuMI_1mu2p0pi_hybridData_11"]

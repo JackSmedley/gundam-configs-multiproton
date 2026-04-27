@@ -436,7 +436,7 @@
 - parameterName: "DecayAngMEC"
   priorValue: 0
   isFixed: true
-  isEnabled: true
+  isEnabled: false
   priorType: "Flat"
   dialSetDefinitions:
     - dialType: Spline
@@ -450,7 +450,7 @@
 - parameterName: "Theta_Delta2Npi"
   priorValue: 0
   isFixed: true
-  isEnabled: true
+  isEnabled: false
   priorType: "Flat"
   dialSetDefinitions:
     - dialType: Spline
