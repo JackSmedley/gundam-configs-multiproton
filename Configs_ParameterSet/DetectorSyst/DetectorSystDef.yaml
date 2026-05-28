@@ -46,3 +46,11 @@
       dialLeafName: "NuMIXSecElectronLifetimeSyst"
       applyCondition: "[IsData]==0"
 
+- parameterName: "NuMIXSecProtonEffSyst"
+  isEnabled: true
+  dialSetDefinitions:
+    - dialType: Spline
+      minimumSplineResponse: 0
+      dialLeafName: "NuMIXSecProtonEffSyst"
+      applyCondition: "[IsData]==0"
+

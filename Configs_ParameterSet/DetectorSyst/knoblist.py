@@ -8,4 +8,5 @@ DetSystMultisigmaKnobNames = [
 "NuMIXSecMiddleIndPlaneTransparencySyst",
 "NuMIXSecCaloGainSyst",
 "NuMIXSecElectronLifetimeSyst",
+"NuMIXSecProtonEffSyst",
 ]

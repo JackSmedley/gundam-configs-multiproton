@@ -50,6 +50,7 @@ std::vector<std::string> GetDetSystMultisigmaKnobNames(){
 "NuMIXSecMiddleIndPlaneTransparencySyst",
 "NuMIXSecCaloGainSyst",
 "NuMIXSecElectronLifetimeSyst",
+"NuMIXSecProtonEffSyst",
   };
 
 
