@@ -22,7 +22,7 @@
   # "_selectedDataEntry_" is set by "selectedDataEntry"
   # - default: "Asimov"
 
-  selectedDataEntry: "1to1Asimov"
+  selectedDataEntry: "asimov"
   #selectedDataEntry: "signalUpBy2"
   #selectedDataEntry: "signalLinearInrease"
   #selectedDataEntry: "1pNpiUpBy50Perc"
@@ -80,7 +80,7 @@
     ## Then below are added to the map
 
 
-    - name: "1to1Asimov"
+    - name: "asimov"
       tree: "tclones/recoTree"
       nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21) )"
       filePathList:
