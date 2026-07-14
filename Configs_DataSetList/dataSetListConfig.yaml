@@ -177,7 +177,7 @@
 
     - name: "DecayAngMEC"
       tree: "tclones/recoTree"
-      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR)) )"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * DecayAngMECVAR) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -185,7 +185,7 @@
 
     - name: "Theta_Delta2Npi"
       tree: "tclones/recoTree"
-      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR)) )"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * Theta_Delta2NpiVAR) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -235,13 +235,13 @@
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR) * 2.500616E+20/1.0900766e+21) )"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * Theta_Delta2NpiVAR * 2.500616E+20/1.0900766e+21) )"
 
   data:
     - name: "asimovSignal"
       tree: "tclones/recoTree"
       ##                     Is signal selection then 0 for data events           and asimov for MC,                             else 1 for data events and 0 MC
-      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR) * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
+      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * Theta_Delta2NpiVAR * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -264,13 +264,13 @@
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * 2.500616E+20/1.0900766e+21) )"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * DecayAngMECVAR * 2.500616E+20/1.0900766e+21) )"
 
   data:
     - name: "asimovSignal"
       tree: "tclones/recoTree"
       ##                     Is signal selection then 0 for data events           and asimov for MC,                             else 1 for data events and 0 MC
-      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
+      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * DecayAngMECVAR * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -293,13 +293,13 @@
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR) * 2.500616E+20/1.0900766e+21) )"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * DecayAngMECVAR * Theta_Delta2NpiVAR * 2.500616E+20/1.0900766e+21) )"
 
   data:
     - name: "asimovSignal"
       tree: "tclones/recoTree"
       ##                     Is signal selection then 0 for data events           and asimov for MC,                             else 1 for data events and 0 MC
-      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR) * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
+      nominalWeightFormula: "CutType == 0 ? ( IsData ? (0.) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * DecayAngMECVAR * Theta_Delta2NpiVAR * 2.500616E+20/1.0900766e+21) ) : ( IsData ? (1.) : (0.) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -345,7 +345,7 @@
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.349283 : 0.288502) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * 7.24728e+19/1.0900766e+21) )"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.349283 : 0.288502) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * DecayAngMECVAR * 7.24728e+19/1.0900766e+21) )"
 
   data:
     - name: "thirtyPercent"
@@ -369,7 +369,7 @@
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.349283 : 0.288502) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR) * 7.24728e+19/1.0900766e+21) )"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.349283 : 0.288502) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * Theta_Delta2NpiVAR * 7.24728e+19/1.0900766e+21) )"
 
   data:
     - name: "thirtyPercent"
@@ -394,7 +394,7 @@
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
       - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.349283 : 0.288502) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * (DecayAngMECVAR==TMath::Infinity() || DecayAngMECVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(DecayAngMECVAR)?1.:DecayAngMECVAR) * (Theta_Delta2NpiVAR==TMath::Infinity() || Theta_Delta2NpiVAR==(TMath::Infinity()*-1.) || TMath::IsNaN(Theta_Delta2NpiVAR)?1.:Theta_Delta2NpiVAR) * 7.24728e+19/1.0900766e+21) )"
+    nominalWeightFormula: "( IsData ? (Run<9300 ? 0.349283 : 0.288502) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * DecayAngMECVAR * Theta_Delta2NpiVAR * 7.24728e+19/1.0900766e+21) )"
 
   data:
     - name: "thirtyPercent"
