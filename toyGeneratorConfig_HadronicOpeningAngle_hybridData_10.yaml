@@ -16,7 +16,7 @@ fitterEngineConfig:
       type: "PoissonLLH"
 
     # dataSetManager
-    propagatorConfig: "./Configs_Propagator/propagatorConfig_HadronicOpeningAngle_01.yaml"
+    propagatorConfig: "./Configs_Propagator/HadronicOpeningAngle/propagatorConfig_HadronicOpeningAngle_hybridData_10.yaml"
     dataSetList: "./Configs_DataSetList/dataSetListConfig.yaml"
     plotGeneratorConfig: "./Configs_PlotGenerator/plotConfigs_HadronicOpeningAngle.yaml"
 

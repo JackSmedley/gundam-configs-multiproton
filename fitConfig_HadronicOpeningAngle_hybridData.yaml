@@ -16,7 +16,7 @@ fitterEngineConfig:
       type: "PoissonLLH"
 
     # dataSetManager
-    propagatorConfig: "./Configs_Propagator/HadronicOpeningAngle/propagatorConfig_HadronicOpeningAngle_thirtyPercent.yaml"
+    propagatorConfig: "./Configs_Propagator/HadronicOpeningAngle/propagatorConfig_HadronicOpeningAngle_hybridData.yaml"
     dataSetList: "./Configs_DataSetList/dataSetListConfig.yaml"
     plotGeneratorConfig: "./Configs_PlotGenerator/plotConfigs_HadronicOpeningAngle.yaml"
 
@@ -36,15 +36,7 @@ fitterEngineConfig:
 
   ## "_enablePostFitScan_" is set by "enablePostFitScan"
   ## - default: false
-  enablePostFitScan: false
-
-
-
-statThrowConfig:
-  enableStatThrowInToys: true
-  enableEventMcThrow: true
-
-
+  enablePostFitScan: true
 
   ## "_enablePreFitToPostFitLineScan_" is set by "enablePreFitToPostFitLineScan"
   ## - default: true
