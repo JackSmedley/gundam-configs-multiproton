@@ -16,7 +16,7 @@ fitterEngineConfig:
       type: "PoissonLLH"
 
     # dataSetManager
-    propagatorConfig: "./Configs_Propagator/propagatorConfig_MuonHadronAngle.yaml"
+    propagatorConfig: "./Configs_Propagator/MuonHadronAngle/propagatorConfig_MuonHadronAngle.yaml"
     dataSetList: "./Configs_DataSetList/dataSetListConfig.yaml"
     plotGeneratorConfig: "./Configs_PlotGenerator/plotConfigs_MuonHadronAngle.yaml"
 

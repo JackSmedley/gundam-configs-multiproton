@@ -22,9 +22,9 @@ fitterEngineConfig:
     # dataSetManager
     propagatorConfig:
       # use --fitsample-config to update
-      fitSampleSetConfig: "./Configs_FitSampleSet/MuonHadronAngle/fitSamples_MuonHadronAngle_True.yaml"
+      fitSampleSetConfig: "./Configs_FitSampleSet/fitSamples_MuonHadronAngle_True.yaml"
       parametersManagerConfig:
-        parameterSetList: "./Configs_ParameterSetList/parameterSetList_MuonHadronAngle.yaml"
+        parameterSetList: "./Configs_ParameterSetList/parameterSetList_MuonHadronAngle_10.yaml"
 
     dataSetList: "./Configs_DataSetList/dataSetListConfig_True.yaml"
 

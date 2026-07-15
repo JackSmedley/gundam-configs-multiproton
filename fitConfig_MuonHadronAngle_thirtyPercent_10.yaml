@@ -16,7 +16,7 @@ fitterEngineConfig:
       type: "PoissonLLH"
 
     # dataSetManager
-    propagatorConfig: "./Configs_Propagator/MuonHadronAngle/propagatorConfig_MuonHadronAngle_thirtyPercent.yaml"
+    propagatorConfig: "./Configs_Propagator/MuonHadronAngle/propagatorConfig_MuonHadronAngle_thirtyPercent_10.yaml"
     dataSetList: "./Configs_DataSetList/dataSetListConfig.yaml"
     plotGeneratorConfig: "./Configs_PlotGenerator/plotConfigs_MuonHadronAngle.yaml"
 
@@ -36,15 +36,7 @@ fitterEngineConfig:
 
   ## "_enablePostFitScan_" is set by "enablePostFitScan"
   ## - default: false
-  enablePostFitScan: false
-
-
-
-statThrowConfig:
-  enableStatThrowInToys: true
-  enableEventMcThrow: true
-
-
+  enablePostFitScan: true
 
   ## "_enablePreFitToPostFitLineScan_" is set by "enablePreFitToPostFitLineScan"
   ## - default: true
