@@ -22,7 +22,7 @@ fitterEngineConfig:
     # dataSetManager
     propagatorConfig:
       # use --fitsample-config to update
-      fitSampleSetConfig: "./Configs_FitSampleSet/fitSamples_DeltaAlphaT_True.yaml"
+      fitSampleSetConfig: "./Configs_FitSampleSet/DeltaAlphaT/fitSamples_DeltaAlphaT_True.yaml"
       parametersManagerConfig:
         parameterSetList: "./Configs_ParameterSetList/parameterSetList_DeltaAlphaT.yaml"
 

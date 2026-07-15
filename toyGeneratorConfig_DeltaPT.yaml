@@ -16,7 +16,7 @@ fitterEngineConfig:
       type: "PoissonLLH"
 
     # dataSetManager
-    propagatorConfig: "./Configs_Propagator/propagatorConfig_DeltaPT.yaml"
+    propagatorConfig: "./Configs_Propagator/DeltaPT/propagatorConfig_DeltaPT.yaml"
     dataSetList: "./Configs_DataSetList/dataSetListConfig.yaml"
     plotGeneratorConfig: "./Configs_PlotGenerator/plotConfigs_DeltaPT.yaml"
 
