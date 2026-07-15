@@ -2,7 +2,7 @@
 
 ## ParameterManager
 parametersManagerConfig:
-  parameterSetList: "./Configs_ParameterSetList/parameterSetList_MuonHadronAngle.yaml"
+  parameterSetList: "./Configs_ParameterSetList/parameterSetList_MuonHadronAngle_Merged.yaml"
 
   ## "_reThrowParSetIfOutOfBounds_" is set by "reThrowParSetIfOutOfBounds"
   ## default: true
