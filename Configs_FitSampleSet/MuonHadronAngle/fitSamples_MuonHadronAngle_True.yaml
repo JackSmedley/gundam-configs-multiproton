@@ -2,6 +2,7 @@ fitSampleList:
   - name: "TrueMuonHadronAngle_XS"
     isEnabled: true
     binning: "./binnings/binning_TrueMuonHadronAngle.txt"
+    #binning: "./binnings/binning_TrueMuonHadronAngle_Merged.txt" #For 30% sample, first three template parameters merged due to low data count
 
     selectionCuts: "" # (numu+numubar)
     #selectionCuts: "TrueE>0.3" # (numu+numubar) but Enu>0.3 GeV
