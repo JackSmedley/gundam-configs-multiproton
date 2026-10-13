@@ -122,7 +122,7 @@
 
     - name: "EmpiricalMEC"
       tree: "tclones/recoTree"
-      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC_Empirical==TMath::Infinity() || XSecShapeWgt_CCMEC_Empirical==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC_Empirical) || XSecShapeWgt_CCMEC_Empirical>4.5) ?1.:XSecShapeWgt_CCMEC_Empirical) )"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * XSecShapeWgt_CCMEC_Empirical) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -130,7 +130,7 @@
 
     - name: "ValenciaMEC"
       tree: "tclones/recoTree"
-      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC==TMath::Infinity() || XSecShapeWgt_CCMEC==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC) || XSecShapeWgt_CCMEC>4.5) ?1.:XSecShapeWgt_CCMEC) )"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * XSecShapeWgt_CCMEC) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -138,7 +138,7 @@
 
     - name: "MartiniMEC"
       tree: "tclones/recoTree"
-      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * (XSecShapeWgt_CCMEC_Martini==TMath::Infinity() || XSecShapeWgt_CCMEC_Martini==(TMath::Infinity()*-1.) || TMath::IsNaN(XSecShapeWgt_CCMEC_Martini)?1.:XSecShapeWgt_CCMEC_Martini)) )"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * XSecShapeWgt_CCMEC_Martini) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
@@ -146,7 +146,7 @@
 
     - name: "FSI_INCL"
       tree: "tclones/recoTree"
-      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * (FSI_INCL==TMath::Infinity() || FSI_INCL==(TMath::Infinity()*-1.) || TMath::IsNaN(FSI_INCL)?1.:FSI_INCL)) )"
+      nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * FSI_INCL) )"
       filePathList:
         - "/exp/icarus/data/users/jsmedley/triggerWeightedMC/MakeTree_NuMI_MC_Nu_Phase2_2023ANuMIReproc_CAFTypeCommonRemerge_ReNuSyst250403_WithTrackSplit_BNBFixedProb_TriggerWeight_TClones.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_Offbeam/MakeTree_Data_OffBeamNUMIMAJORITY_2023ANuMIReproc_Run1.root"
