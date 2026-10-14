@@ -435,6 +435,7 @@
 
 - parameterName: "DecayAngMEC"
   isEnabled: true
+  priorType: "Flat"
   dialSetDefinitions:
     - dialType: Graph
       minimumSplineResponse: 0
@@ -445,7 +446,8 @@
       applyCondition: "[IsData]==0"
 
 - parameterName: "Theta_Delta2Npi"
-  isEnabled: false
+  isEnabled: true
+  priorType: "Flat"
   dialSetDefinitions:
     - dialType: Graph
       minimumSplineResponse: 0
