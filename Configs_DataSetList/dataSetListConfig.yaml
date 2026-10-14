@@ -101,12 +101,6 @@
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run1.root"
         - "/exp/icarus/data/users/jsmedley/sbnana_jobsub/Mar20_26_OnbeamDONOTLOOK/MakeTree_Data_NUMIMAJORITY_2023ANuMIReproc_Run2.root"
 
-    - name: "thirtyPercent"
-      tree: "thirtyPercentTree"
-      nominalWeightFormula: "( IsData ? (1.) : (0.) )"
-      filePathList:
-        - "/exp/icarus/data/users/jsmedley/blindedTrees/thirtyPercent.root"
-
     - name: "signalUpBy2"
       tree: "tclones/recoTree"
       nominalWeightFormula: "( IsData ? (Run<9300 ? 1.26862061947009 : 0.984613145608233) : ((Category == 11 ? 0.71202822 : CVWgt*POTWeightedTriggerWeight) * 2.500616E+20/1.0900766e+21 * ((Category == 0 || Category == 2) ? 2. : 1.)) )"
